@@ -2,8 +2,8 @@ import uvicorn
 from fastapi import FastAPI
 
 # from api.openapi import configs
-from api.api.routers import user_routes
-from api.settings import DEBUG, RELOAD
+from routers import user_routes
+from settings import DEBUG, RELOAD
 
 app = FastAPI(debug=DEBUG)
 
