@@ -1,4 +1,4 @@
-from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
+from sqlalchemy import Boolean, Column, DateTime, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 
 from ..settings import BASE_DB
@@ -8,16 +8,24 @@ class User(BASE_DB):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String(50), nullable=True)
-    sobrenome = Column(String(50), nullable=True)
+    name = Column(String(50), nullable=False)
+    last_name = Column(String(50), nullable=False)
+    full_name = Column(String(100), nullable=False, unique=True)
     email = Column(String(320), unique=True, index=True)
     hashed_password = Column(String(255))
     is_active = Column(Boolean, default=True)
+    created_at = Column(DateTime)
 
-    group = relationship("Groups", back_populates="user_name")
+    permission = relationship("Permission", back_populates="user_name")
+
+    def create_user():
+        pass
+
+    def update_user():
+        pass
 
 
-class Groups(BASE_DB):
-    __tablename__ = "groups"
+class Permission(BASE_DB):
+    __tablename__ = "permissions"
 
-    user_n= relationship("User", back_populates="group")
+    user_n = relationship("User", back_populates="permission")
