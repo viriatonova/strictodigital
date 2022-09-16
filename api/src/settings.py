@@ -29,4 +29,11 @@ SESSION_LOCAL = sessionmaker(autocommit=False, autoflush=False, bind=ENGINE)
 
 BASE_DB = declarative_base()
 
+# Dependency
+def get_db():
+    db = SESSION_LOCAL()
+    try:
+        yield db
+    finally:
+        db.close()
 

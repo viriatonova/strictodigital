@@ -1,6 +1,6 @@
+from api.models.UserModel import User
 from authentication import hash_provider
 from fastapi import APIRouter, status
-from models.user import User
 
 router = APIRouter(
     prefix="/api/v1",
@@ -12,6 +12,6 @@ router = APIRouter(
     status_code=status.HTTP_201_CREATED,
     response_model=User
 )
-def singup(user, session):
+def singup(user: User, session):
     user.password = hash_provider.create_hash(user.password)
     return user
