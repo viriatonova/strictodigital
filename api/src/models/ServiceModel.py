@@ -5,7 +5,7 @@ from ..settings import BASE
 
 
 class Service(BASE):
-    __tablename__ = "servics"
+    __tablename__ = "services"
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(100), nullable=False)

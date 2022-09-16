@@ -20,7 +20,7 @@ async def healthchecker() -> dict:
     response_model=user_schema.User
 
 )
-def create_user(user: user_schema.UserCreate, db: Session = Depends(get_db)):
+def create_user(user: user_schema.User, db: Session = Depends(get_db)):
     db_user = user_crud.get_user_by_email(db, email=user.email)
     if db_user:
         raise HTTPException(status_code=400, detail="Email already registered")

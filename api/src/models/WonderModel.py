@@ -6,7 +6,7 @@ from ..settings import BASE
 
 
 class Wonder(BASE):
-    __tablename__ = "worderss"
+    __tablename__ = "wonders"
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(100), nullable=False)
