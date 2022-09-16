@@ -2,10 +2,10 @@ from sqlalchemy import (Boolean, Column, DateTime, ForeignKey, Integer, String,
                         Text)
 from sqlalchemy.orm import relationship
 
-from ..settings import BASE_DB
+from ..settings import BASE
 
 
-class Wonder(BASE_DB):
+class Wonder(BASE):
     __tablename__ = "worderss"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -16,7 +16,7 @@ class Wonder(BASE_DB):
 
 
 
-class Trekking(BASE_DB):
+class Trekking(BASE):
     __tablename__ = "trekkings"
 
     id = Column(Integer, primary_key=True, index=True)

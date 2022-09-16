@@ -19,14 +19,13 @@ services:
             timeout: 1s
             retries: 5
 
-# python service
-    # api:
-    #     build: ./api
-    #     command: python main.py
-    #     volumes:
-    #         - ./api:/code
-    #     ports:
-    #         - "9000:9000"
-    #     depends_on:
-    #         db:
-    #             condition: service_healthy
+    api:
+        build: ./api
+        command: python main.py
+        volumes:
+            - ./api:/code
+        ports:
+            - "9000:9000"
+        depends_on:
+            portal_db:
+                condition: service_healthy

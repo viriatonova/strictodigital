@@ -1,7 +1,7 @@
-from authentication import hash_provider
-from models import UserModel
-from schemas import user_schema
 from sqlalchemy.orm import Session
+from src.authentication import hash_provider
+from src.models import UserModel
+from src.schemas import user_schema
 
 
 def create_user(user: user_schema.UserCreate, db: Session):

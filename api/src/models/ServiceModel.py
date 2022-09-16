@@ -1,10 +1,10 @@
 from sqlalchemy import Boolean, Column, DateTime, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 
-from ..settings import BASE_DB
+from ..settings import BASE
 
 
-class Service(BASE_DB):
+class Service(BASE):
     __tablename__ = "servics"
 
     id = Column(Integer, primary_key=True, index=True)
