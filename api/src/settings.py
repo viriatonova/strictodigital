@@ -10,13 +10,15 @@ load_dotenv()
 
 # ENVIROMENT VARIBLES
 DEBUG = os.getenv("DEBUG")
-RELOAD = os.getenv("RELOAD") 
+RELOAD = os.getenv("RELOAD")
+API_PORT = int(os.getenv("API_PORT"))
+API_HOST = os.getenv("API_HOST")
 DB = {
-    'SERVER': os.getenv('SERVER'),
-    'DATABASE' : os.getenv('DATABASE'),
-    'USER' : os.getenv('USER'),
-    'PASSWORD' : os.getenv('USER_PASSWORD'),
-    'HOST' : os.getenv('HOST')
+    'SERVER': os.getenv('DB_SERVER'),
+    'DATABASE' : os.getenv('DB_DATABASE'),
+    'USER' : os.getenv('DB_USER'),
+    'PASSWORD' : os.getenv('DB_PASSWORD'),
+    'HOST' : os.getenv('DB_HOST')
 }
 
 # DATABASE CONNECTION

@@ -9,9 +9,9 @@ def create_user(user: user_schema.UserCreate, db: Session):
     db_user = UserModel.User(
         first_name = user.first_name,
         last_name = user.last_name,
-        password = user.password,
+        # full_name = user.create_fullname(),
         email = user.email,
-        # permission = "default"
+        password = user.password,
     )
     db.add(db_user)
     db.commit()
