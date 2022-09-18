@@ -8,7 +8,13 @@ from sqlalchemy.orm import sessionmaker
 # Load env file
 load_dotenv()
 
-# ENVIROMENT VARIBLES
+# API Authentication
+SECRET_KEY = os.getenv("SECRET_KEY")
+ALGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 30
+
+
+# Enviroment Variable
 DEBUG = os.getenv("DEBUG")
 RELOAD = os.getenv("RELOAD")
 API_PORT = int(os.getenv("API_PORT"))
@@ -21,8 +27,7 @@ DB = {
     'HOST' : os.getenv('DB_HOST')
 }
 
-# DATABASE CONNECTION
-# https://fastapi.tiangolo.com/tutorial/sql-databases/
+# Database connectino
 DATABASE_URL = f"{DB.get('SERVER')}://{DB.get('USER')}:{DB.get('PASSWORD')}@{DB.get('HOST')}/{DB.get('DATABASE')}"
 
 ENGINE = create_engine(DATABASE_URL)
