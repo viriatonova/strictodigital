@@ -3,6 +3,8 @@ from datetime import datetime, timedelta
 from jose import JWTError, jwt
 from pydantic import BaseModel
 
+from ..settings import ALGORITHM, SECRET_KEY
+
 
 # Pydantic shcemas 
 class Token(BaseModel):

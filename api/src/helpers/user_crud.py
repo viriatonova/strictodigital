@@ -19,6 +19,14 @@ def create_user(user: user_schema.UserCreate, db: Session):
     db.refresh(db_user)
     return db_user
 
+
+
+def get_users(db: Session, skip: int = 0, limit: int = 100):
+    return db.query(UserModel.User).offset(skip).limit(limit).all()
+
+def get_user(db: Session, id: int):
+    return db.query(UserModel.User).filter(UserModel.User.id == id).first()
+    
 def get_user_by_email(db: Session, email: str):
     return db.query(UserModel.User).filter(UserModel.User.email == email).first()
 
