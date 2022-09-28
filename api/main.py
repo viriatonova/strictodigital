@@ -1,9 +1,9 @@
 import uvicorn
 from fastapi import FastAPI
 
-from src.models import ServiceModel, UserModel, WonderModel
 # from api.openapi import configs
-from src.routers import user_routes
+from api.src.routers import default_route
+from src.models import ServiceModel, UserModel, WonderModel
 from src.settings import API_HOST, API_PORT, DEBUG, ENGINE, RELOAD
 
 UserModel.BASE.metadata.create_all(bind=ENGINE)
@@ -12,7 +12,7 @@ WonderModel.BASE.metadata.create_all(bind=ENGINE)
 
 app = FastAPI(debug=DEBUG)
 
-app.include_router(user_routes.router)
+app.include_router(default_route.router)
 
 
 if __name__ == "__main__":

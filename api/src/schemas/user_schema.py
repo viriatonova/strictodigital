@@ -9,6 +9,7 @@ class UserBase(BaseModel):
 class UserCreate(UserBase):
     password: str
     is_admin: bool = False
+    is_active: bool | None = None
 
 class User(UserBase):
     id: int

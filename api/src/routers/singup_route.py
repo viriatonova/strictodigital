@@ -1,12 +1,8 @@
-from api.models.UserModel import User
 from authentication import hash_provider
 from fastapi import APIRouter, status
+from src.models.UserModel import User
 
-router = APIRouter(
-    prefix="/api/v1",
-    tags=["api/v1"],
-    responses={404: {"description": "Not found"}},
-)
+router = APIRouter()
 
 @router.post("/singup",
     status_code=status.HTTP_201_CREATED,

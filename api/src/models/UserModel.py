@@ -16,3 +16,5 @@ class User(BASE):
     email = Column(String(320), unique=True)
     password = Column(String(255))
     is_admin = Column(Boolean, default=False)
+    is_active = Column(Boolean, default=False)
+

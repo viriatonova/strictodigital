@@ -7,3 +7,6 @@ def verify_hash(input_text: str, text_hashed: str) -> bool:
 
 def create_hash(input_text: str) -> str:
     return pwd_context.hash(input_text)
+
+def verify_password(plain_password, hashed_password):
+    return pwd_context.verify(plain_password, hashed_password)
