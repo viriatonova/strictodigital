@@ -1,5 +1,3 @@
-from email.policy import default
-
 from sqlalchemy import Boolean, Column, DateTime, Integer, String
 from sqlalchemy.sql import func
 

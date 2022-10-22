@@ -1,6 +1,6 @@
-from api.src.helpers import user_helper
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
+from src.helpers import user_helper
 from src.schemas import user_schema
 from src.settings import get_db
 

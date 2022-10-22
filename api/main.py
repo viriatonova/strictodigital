@@ -1,14 +1,14 @@
 import uvicorn
 from fastapi import FastAPI
 
+from src.models import service_model, user_model, wonder_model
 # from api.openapi import configs
-from api.src.routers import default_route
-from src.models import ServiceModel, UserModel, WonderModel
+from src.routers import default_route
 from src.settings import API_HOST, API_PORT, DEBUG, ENGINE, RELOAD
 
-UserModel.BASE.metadata.create_all(bind=ENGINE)
-ServiceModel.BASE.metadata.create_all(bind=ENGINE)
-WonderModel.BASE.metadata.create_all(bind=ENGINE)
+user_model.BASE.metadata.create_all(bind=ENGINE)
+service_model.BASE.metadata.create_all(bind=ENGINE)
+wonder_model.BASE.metadata.create_all(bind=ENGINE)
 
 app = FastAPI(debug=DEBUG)
 

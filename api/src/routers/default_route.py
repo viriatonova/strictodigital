@@ -1,5 +1,5 @@
-from api.src.routers import singup_route, user_route
 from fastapi import APIRouter
+from src.routers import singup_route, user_route
 
 router = APIRouter(
     prefix="/api/v1",
@@ -7,8 +7,8 @@ router = APIRouter(
     responses={404: {"description": "Not found"}},
 )
 
-router.include_router(user_route)
-router.include_router(singup_route)
+router.include_router(user_route.router)
+router.include_router(singup_route.router)
 
 
 @router.get("/")
