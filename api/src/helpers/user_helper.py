@@ -1,12 +1,11 @@
-from fastapi import Depends, FastAPI, HTTPException, status
-from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+from fastapi import Depends, HTTPException, status
+from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
 from sqlalchemy.orm import Session
 from src.authentication import hash_provider, token_provider
 from src.models import user_model
 from src.schemas import user_schema
-
-from ..settings import ALGORITHM, SECRET_KEY, get_db
+from src.settings import ALGORITHM, SECRET_KEY, get_db
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
@@ -14,6 +13,7 @@ def create_user(user: user_schema.UserCreate, db: Session):
     user.password = hash_provider.create_hash(user.password)
     # user.full_name = create_fullname(user.first_name, user.last_name)
     db_user = user_model.User(
+        username = user.username,
         first_name = user.first_name,
         last_name = user.last_name,
         email = user.email,
@@ -31,8 +31,8 @@ def get_users(db: Session, skip: int = 0, limit: int = 100):
     return db.query(user_model.User).offset(skip).limit(limit).all()
 
 
-def get_user(db: Session, id: int):
-    return db.query(user_model.User).filter(user_model.User.id == id).first()
+def get_user(db: Session, username: str):
+    return db.query(user_model.User).filter(user_model.User.username == username).first()
 
 
 def get_user_by_email(db: Session, email: str):
@@ -73,6 +73,6 @@ def authenticate_user(db: Session, username: str, password: str):
     user = get_user(db, username)
     if not user:
         return False
-    if not hash_provider.verify_password(password, user.hashed_password):
+    if not hash_provider.verify_password(password, user.password):
         return False
     return user

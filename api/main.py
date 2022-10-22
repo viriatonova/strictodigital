@@ -2,7 +2,6 @@ import uvicorn
 from fastapi import FastAPI
 
 from src.models import service_model, user_model, wonder_model
-# from api.openapi import configs
 from src.routers import default_route
 from src.settings import API_HOST, API_PORT, DEBUG, ENGINE, RELOAD
 
