@@ -6,8 +6,8 @@ const Login = () => {
         <main className="login">
             <section>
                 <SocialSidebar />
-                <div>
-                    <header className="w-full h-1/3">
+                <article>
+                    <header className="w-full h-auto mb-6">
                         <h1 className="text-skin-inverted">Portal Capão</h1>
                         <h3 className="text-skin-inverted mt-2">
                             Sua porta de entrada para o Vale
@@ -17,12 +17,12 @@ const Login = () => {
                         <NavLink className="login-link" to="singin">
                             SingIn
                         </NavLink>
-                        <NavLink className="login-link" to="singup">
+                        <NavLink className="login-link ml-6" to="singup">
                             SingUp
                         </NavLink>
                     </div>
                     <Outlet />
-                </div>
+                </article>
             </section>
             <aside>
                 <p>content</p>

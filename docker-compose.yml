@@ -19,7 +19,7 @@ services:
             timeout: 1s
             retries: 5
 
-    api:
+    portal_api:
         build: ./api
         command: python main.py
         volumes:
@@ -29,3 +29,14 @@ services:
         depends_on:
             portal_db:
                 condition: service_healthy
+
+
+    portal_frontend:
+        build: ./frontend
+        command: npm start
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./frontend:/code
+        depends_on:
+            - portal_api
