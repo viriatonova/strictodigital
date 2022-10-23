@@ -1,11 +1,11 @@
-const LoginForm = () => {
+const SingInForm = () => {
     return (
-        <form className="login-form">
+        <form className="singin-form">
             <fieldset className="input-default">
                 <label htmlFor="username">Usuário</label>
                 <input name="username" type="text" />
             </fieldset>
-            <fieldset className="input-default">
+            <fieldset className="input-default mt-6">
                 <label htmlFor="password">Senha</label>
                 <input name="password" type="password" />
             </fieldset>
@@ -14,4 +14,4 @@ const LoginForm = () => {
     );
 };
 
-export default LoginForm;
+export default SingInForm;

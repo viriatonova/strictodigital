@@ -8,6 +8,11 @@ module.exports = {
             spacing: {
                 480: "30rem",
             },
+            colors: {
+                base: "var(--color-base)",
+                secundary: "var(--color-secundary)",
+                inverted: "var(--color-inverted)",
+            },
             fontFamily: {
                 title: ['"Open Sans"', ...defaultTheme.fontFamily.serif],
                 sans: ['"Source Sans Pro"', ...defaultTheme.fontFamily.sans],
