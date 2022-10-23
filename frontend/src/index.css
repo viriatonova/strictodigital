@@ -9,24 +9,22 @@
     /* THEME VARIABLES */
     :root {
         /* backgouds */
-        --color-base: #E5E5E5; 
-        --color-palette01: #FFFFFF;
-        --color-palette02: #EFEFEF; /* disabled */
-        --color-palette03: #E70035; /* vermelhor padrão */
-        --color-palette04: #C3102F; /* vermelhor escuro */
+        --color-base: ##1d4ed8; 
+        --color-inverted: #E5E5E5; 
+        --color-secundary: #E5E5E5; 
         
         /* texts */
         --color-text-title: #000000; 
         --color-text-subtitle: #444444;
         --color-text-base: #1d1d1d; 
         --color-text-inverted: #FFFFFF; 
-        --color-text-highlight: #E70035;
+        --color-text-highlight: #22d3ee;
         --color-text-disabled: #A6ACBE;
         
         /* borders, lines, rings */
         --color-attributes-base: #171717; 
         --color-attributes-inverted: #FFFFFF; 
-        --color-attributes-highlight: #E70035;
+        --color-attributes-highlight: #22d3ee;
         --color-attributes-disabled: #EFEFEF;
     }
 
@@ -34,14 +32,12 @@
         --color-base: #171717;
     }
 
-    /* GLOBAL ELEMENTS */
-
     body {
-        @apply w-full h-full flex flex-col
+        @apply w-full h-full 
     }
 
-    body #root {
-        @apply w-full h-full 2xl:h-screen bg-skin-base font-sans
+    #root {
+        @apply w-screen h-screen font-sans
     }
 
     h1 {
@@ -69,4 +65,79 @@
         @apply text-sm lg:text-base xl:text-xl tracking-wide font-light
     } 
    
+}
+
+@layer components {
+
+    /* GLOBAL COMPONENTS */
+
+    .btn-primary {
+        @apply w-52 h-auto px-4 py-2 text-base lg:text-xl
+        border border-skin-base rounded-md 
+        hover:border-none hover:bg-skin-inverted hover:text-skin-inverted
+        transition ease-in-out duration-500
+    }
+
+    .btn-secundary {
+        @apply w-52 h-auto px-4 py-2 text-base lg:text-xl
+        border border-skin-base rounded-md 
+        hover:border-none hover:bg-skin-inverted hover:text-skin-inverted
+        transition ease-in-out duration-500
+    }
+
+    .btn-desable {
+        @apply w-52 h-auto px-4 py-2 text-base lg:text-xl
+        border border-skin-base rounded-md 
+        hover:border-none hover:bg-skin-inverted hover:text-skin-inverted
+        transition ease-in-out duration-500
+    }
+
+    /* FORM PADRÃO */
+
+    .input-default {
+        @apply w-[30rem] h-auto flex flex-col 
+    }
+
+    .input-default input {
+        @apply w-full h-12 px-4 border border-skin-base rounded-md
+        focus:outline-none focus:ring-2 ring-skin-highlight 
+    }
+
+    .input-default select {
+        @apply w-full h-12 px-4 border border-skin-base rounded-md
+        focus:outline-none focus:ring-2 ring-skin-highlight 
+    }
+
+    .input-default label {
+        @apply w-full h-full p-3 
+    }
+
+    .input-disabled {
+        @apply w-full h-auto flex flex-col 
+    }
+
+    .input-disabled input {
+        @apply w-full h-12 px-4 border border-skin-base rounded-md
+    }
+
+    .input-disabled label {
+        @apply w-full h-full p-3 
+    }
+
+    /* LOGIN */
+
+    .login {
+        @apply w-full h-full p-6 flex justify-center items-center
+        bg-gradient-to-br from-blue-900 to-green-700
+    }
+
+    .login div {
+        @apply w-auto h-auto p-24 flex justify-center items-center
+        backdrop-blur-sm bg-white/5 rounded-lg drop-shadow-lg
+    }
+
+    .login-form {
+        @apply w-full h-full flex flex-col justify-center items-center
+    }
+
 }

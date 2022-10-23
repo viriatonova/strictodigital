@@ -16,10 +16,8 @@ module.exports = {
             backgroundColor: {
                 skin: {
                     base: "var(--color-base)",
-                    palette01: "var(--color-palette01)",
-                    palette02: "var(--color-palette02)",
-                    palette03: "var(--color-palette03)",
-                    palette04: "var(--color-palette04)",
+                    secundary: "var(--color-secundary)",
+                    inverted: "var(--color-inverted)",
                 },
             },
             textColor: {

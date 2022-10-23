@@ -1,12 +1,15 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import NotFound from "./pages/NotFound";
+
 function App() {
     return (
-        <div className="App">
-            <h1>Portal Capão</h1>
-            <h2>Portal Capão</h2>
-            <h3>Portal Capão</h3>
-            <p>Portal Capão</p>
-            <span>Portal Capão</span>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Login />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 
