@@ -156,8 +156,7 @@
     .login-link {
         @apply w-full h-full text-2xl tracking-wide capitalize text-skin-inverted
         px-4 py-2 flex justify-center items-center text-justify rounded-sm
-        hover:underline hover:text-skin-highlight border border-skin-inverted
-        hover:border-skin-highlight 
+        hover:underline hover:text-skin-highlight font-bold
     }
 
     .erro-msg {

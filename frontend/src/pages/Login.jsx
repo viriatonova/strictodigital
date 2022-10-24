@@ -17,7 +17,10 @@ const Login = () => {
                         <NavLink className="login-link" to="singin">
                             SingIn
                         </NavLink>
-                        <NavLink className="login-link ml-6" to="singup">
+                        <NavLink
+                            className="login-link  border-l border-white/20"
+                            to="singup"
+                        >
                             SingUp
                         </NavLink>
                     </div>

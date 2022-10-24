@@ -1,15 +1,14 @@
-/**
- * POST method for login user
- *
- * @param {Array} data data from the login form
- * @returns
- */
-export const Register = async (data) => {
-    try {
-        const url = "http://127.0.0.1:8181/login/";
+const apiUrl = "http://127.0.0.1:9000/api/v1";
 
-        let dataApi = {
+export const portalRegister = async (data) => {
+    try {
+        const url = `${apiUrl}/singup`;
+
+        let formData = {
+            first_name: data.firstname,
+            last_name: data.lastname,
             username: data.username,
+            email: data.email,
             password: data.password,
         };
 
@@ -18,7 +17,7 @@ export const Register = async (data) => {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(dataApi),
+            body: JSON.stringify(formData),
         });
 
         const response = await api.json();
