@@ -9,11 +9,11 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Login />}>
+                <Route path="/login" element={<Login />}>
                     <Route path="singin" element={<SingInForm />} />
                     <Route path="singup" element={<SingUpForm />} />
                 </Route>
-                <Route path="/portal" element={<Portal />} />
+                <Route path="/" element={<Portal />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>

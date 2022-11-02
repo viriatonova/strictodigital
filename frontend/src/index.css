@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=DM+Mono:wght@400;500&family=Roboto+Condensed:wght@300;400;700&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,28 +8,22 @@
 
     /* THEME VARIABLES */
     :root {
-        /* backgouds */
-        --color-base: #1d4ed8; 
-        --color-inverted: #E5E5E5; 
-        --color-secundary: #22d3ee; 
+        --color-tittle: #000000; 
+        --color-subtitle: #323232; 
+        --color-text: #191919;
+        --color-mono: #916dad;;
+        --color-quote: #666666;
         
-        /* texts */
-        --color-text-title: #000000; 
-        --color-text-subtitle: #444444;
-        --color-text-base: #1d1d1d; 
-        --color-text-inverted: #FFFFFF; 
-        --color-text-highlight: #22d3ee;
-        --color-text-disabled: #A6ACBE;
+        --color-base: #000000; 
+        --color-primary: #EF4848; 
+        --color-secundary: #916dad; 
+        --color-tertiary: #57B8FF; 
         
-        /* borders, lines, rings */
-        --color-attributes-base: #171717; 
-        --color-attributes-inverted: #FFFFFF; 
-        --color-attributes-highlight: #22d3ee;
-        --color-attributes-disabled: #EFEFEF;
-    }
-
-    .theme-dark {
-        --color-base: #171717;
+        --color-inverted: #FFFFFF;
+        --color-disabled: #999999;
+        --color-highlight: #7E22CE;
+        --color-error: 	#cc3300;
+        --color-warning: #ffcc00;
     }
 
     body {
@@ -37,20 +31,19 @@
     }
 
     #root {
-        @apply w-screen h-screen font-sans
+        @apply w-screen h-screen font-sans text-skin-text
     }
 
     h1 {
-        @apply text-xl lg:text-3xl xl:text-5xl text-skin-base font-title font-bold
+        @apply text-xl lg:text-3xl xl:text-5xl text-skin-title font-title font-bold
     }
 
     h2 {
-        @apply text-lg lg:text-2xl xl:text-4xl font-title font-semibold
-        text-skin-title
+        @apply text-lg lg:text-xl xl:text-2xl font-title font-semibold text-skin-title
     }
 
     h3 {
-        @apply text-base lg:text-xl xl:text-2xl text-skin-subtitles
+        @apply text-base lg:text-lg xl:text-xl text-skin-subtitle
     }
 
     p {
@@ -72,9 +65,10 @@
     /* GLOBAL COMPONENTS */
 
     .btn-primary {
-        @apply w-52 h-auto px-4 py-2 text-base lg:text-2xl font-light
-        border border-skin-inverted rounded-sm text-skin-inverted
-        hover:border-none hover:bg-skin-inverted hover:text-skin-base
+        @apply w-52 h-auto px-4 py-2 text-base lg:text-2xl 
+        font-light text-skin-text
+        border border-skin-base rounded-sm 
+        hover:border-none hover:bg-skin-inverted hover:text-skin-text
         transition ease-in-out duration-500
     }
 

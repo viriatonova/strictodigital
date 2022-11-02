@@ -1,23 +1,16 @@
-import { createContext, useState, useCallback, useEffect } from "react";
-import { token } from "../helpers/getAuthentication";
+import { createContext, useReducer } from "react";
+import { AuthReducer, AuthState } from "../reducers/AuthReducer";
 
 export const AuthenticationContext = createContext();
 
 // eslint-disable-next-line react/prop-types
 export function HistoricoProvider({ children }) {
-    const [getToken, setGetToken] = useState([]);
+    const [state, dispatch] = useReducer(AuthReducer, AuthState);
 
-    const handleToken = useCallback(() => {
-        const requestToken = token;
-        setGetToken(requestToken);
-    }, []);
-
-    useEffect(() => {
-        handleToken();
-    }, [handleToken]);
+    const loginUser = (payload) => dispatch({ type: "LOGIN_USER", payload });
 
     return (
-        <AuthenticationContext.Provider value={{ getToken, setGetToken }}>
+        <AuthenticationContext.Provider value={{ state, loginUser }}>
             {children}
         </AuthenticationContext.Provider>
     );

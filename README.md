@@ -1,6 +1,6 @@
-# Portal Capao Project
+# Stricto Digital Project
 
-Web aplication to server services of Vale do Capão, Bahia - Brasil
+Web aplication to content manage, publisher portal Stricto Digital
 
 
 ## Content

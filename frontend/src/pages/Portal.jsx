@@ -1,8 +1,11 @@
+import NavPrincipal from "../components/navs/NavPrincipal";
+
 const Portal = () => {
     return (
-        <div>
+        <main>
+            <NavPrincipal />
             <h2>Portal</h2>
-        </div>
+        </main>
     );
 };
 
