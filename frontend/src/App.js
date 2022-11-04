@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
-import SingUpForm from "./components/forms/SingUpForm";
-import SingInForm from "./components/forms/SingInForm";
+import SingUpForm from "./blog/components/forms/SingUpForm";
+import SingInForm from "./blog/components/forms/SingInForm";
 import NotFound from "./pages/NotFound";
 import Portal from "./pages/Portal";
 

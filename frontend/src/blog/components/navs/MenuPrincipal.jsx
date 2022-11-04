@@ -1,10 +1,10 @@
 import MenuItens from "./MenuItens";
-import { menuItems } from "../../helpers/principalItems";
+import { menuPrincipalItems } from "../../helpers/menuItens";
 
 const MenuPrincipal = () => {
     return (
-        <ul>
-            {menuItems.map((menu, index) => {
+        <ul className="menu-principal">
+            {menuPrincipalItems.map((menu, index) => {
                 return <MenuItens items={menu} key={index} />;
             })}
         </ul>

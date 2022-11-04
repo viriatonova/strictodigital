@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import MenuDropdown from "./MenuDropdown";
 
 const MenuItens = ({ items }) => {
     const [isShow, setIsShow] = useState(false);
@@ -14,21 +15,21 @@ const MenuItens = ({ items }) => {
                     <NavLink
                         className={
                             location.pathname === `/cti/${items.url}`
-                                ? "cam-link text-skin-highlight"
-                                : "cam-link"
+                                ? "stricto-link text-skin-highlight"
+                                : "stricto-link"
                         }
                         to={items.url}
                     >
                         {items.title}
                     </NavLink>
-                    {/* {isShow && <MenuDropdown submenus={items.submenu} />} */}
+                    {isShow && <MenuDropdown submenus={items.submenu} />}
                 </>
             ) : (
                 <NavLink
                     className={
                         location.pathname === `/cti/${items.url}`
-                            ? "cam-link text-skin-highlight"
-                            : "cam-link"
+                            ? "stricto-link text-skin-highlight"
+                            : "stricto-link"
                     }
                     to={items.url}
                 >

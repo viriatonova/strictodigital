@@ -1,4 +1,4 @@
-import SocialSidebar from "../components/social/SocialSideBar";
+import SocialSidebar from "../blog/components/social/SocialSideBar";
 import { Outlet, NavLink } from "react-router-dom";
 
 const Login = () => {

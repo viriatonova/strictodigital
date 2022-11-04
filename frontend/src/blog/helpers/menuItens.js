@@ -1,15 +1,15 @@
-export const menuItems = [
+export const menuPrincipalItems = [
     {
-        title: "sobre",
-        url: "sobre",
+        title: "noticias",
+        url: "noticias",
     },
     {
-        title: "equipe",
-        url: "equipe",
+        title: "politica",
+        url: "politica",
     },
     {
-        title: "apoie",
-        url: "apoie",
+        title: "sociedade",
+        url: "sociedade",
     },
     {
         title: "cidades",
@@ -28,5 +28,20 @@ export const menuItems = [
                 url: "salvador",
             },
         ],
+    },
+];
+
+export const menuAccessItems = [
+    {
+        title: "sobre",
+        url: "sobre",
+    },
+    {
+        title: "equipe",
+        url: "equipe",
+    },
+    {
+        title: "apoie",
+        url: "apoie",
     },
 ];
