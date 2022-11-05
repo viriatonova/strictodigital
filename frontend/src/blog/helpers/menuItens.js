@@ -45,3 +45,34 @@ export const menuAccessItems = [
         url: "apoie",
     },
 ];
+
+export const menuTags = [
+    {
+        title: "politica",
+        url: "politica",
+    },
+    {
+        title: "sociedade",
+        url: "sociedade",
+    },
+    {
+        title: "arte&cultura",
+        url: "arte&cultura",
+    },
+    {
+        title: "entreterimento",
+        url: "entreterimento",
+    },
+    {
+        title: "filosfia",
+        url: "filosfia",
+    },
+    {
+        title: "opiniao",
+        url: "opiniao",
+    },
+    {
+        title: "economia",
+        url: "economia",
+    },
+];
