@@ -4,6 +4,8 @@ import NavTags from "../blog/components/navs/NavTags";
 import MainPosts from "../blog/components/home-posts/MainPosts";
 import CallApoio from "../blog/components/home-aside/CallApoio";
 import FooterBlog from "../blog/components/Footer";
+import Colunas from "../blog/components/home-aside/Colunas";
+import Ranking from "../blog/components/Ranking";
 
 const Portal = () => {
     return (
@@ -17,6 +19,8 @@ const Portal = () => {
                 </section>
                 <aside>
                     <CallApoio />
+                    <Colunas />
+                    <Ranking />
                 </aside>
             </div>
             <FooterBlog />

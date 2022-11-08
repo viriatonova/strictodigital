@@ -43,7 +43,7 @@
     }
 
     h3 {
-        @apply text-base lg:text-lg xl:text-xl text-skin-subtitle
+        @apply text-xl lg:text-2xl text-skin-title font-semibold
     }
 
     p {
@@ -309,6 +309,69 @@
         bg-gray-100 rounded-md
     }
 
+    .colunas {
+        @apply w-full h-auto mt-12
+        flex flex-col justify-start items-start
+    }
+
+    .colunas-wrapper {
+        @apply w-full h-full space-y-4
+        flex flex-col justify-start items-start
+    }
+
+    .colunas-card {
+        @apply w-full h-full
+        flex justify-start items-center
+    }
+    
+    .colunas-image {
+        @apply w-32 h-32 object-cover bg-center
+    }
+
+    .colunas-description {
+        @apply w-full h-auto ml-6
+        flex flex-col justify-start items-center
+        text-left
+    }
+
+    .ranking {
+        @apply w-full h-full mt-16
+        flex flex-col justify-start items-center
+        border border-gray-500
+    }
+
+    .top {
+        @apply w-full h-auto relative
+        flex flex-col justify-start items-start
+    }
+
+    .top-legenda {
+        @apply w-auto h-auto
+        absolute -top-4 left-6
+        bg-white
+    }
+
+    .top-wrapper {
+        @apply w-full h-full space-y-6 py-12
+        flex flex-col justify-center items-center
+    }
+
+    .top-card {
+        @apply w-full h-full
+        flex justify-start items-center
+    }
+    
+    .top-image {
+        @apply w-32 h-32 object-cover bg-center
+    }
+
+    .top-description {
+        @apply w-full h-auto ml-6
+        flex flex-col justify-start items-center
+        text-left
+    }
+
+    
     /*
     * FOOTER BLOG
     *
