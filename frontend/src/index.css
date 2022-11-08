@@ -262,7 +262,7 @@
     }
 
     .portal-main-posts > aside {
-        @apply w-1/3 h-full px-6
+        @apply w-1/3 h-full px-2
         flex flex-col justify-start items-start
     }
 
@@ -325,13 +325,14 @@
     }
     
     .colunas-image {
-        @apply w-32 h-32 object-cover bg-center
+        @apply w-24 h-24 object-cover bg-center
+        rounded-lg
     }
 
     .colunas-description {
-        @apply w-full h-auto ml-6
+        @apply w-full h-auto mr-2
         flex flex-col justify-start items-center
-        text-left
+        text-left 
     }
 
     .ranking {
@@ -341,14 +342,13 @@
     }
 
     .top {
-        @apply w-full h-auto relative
+        @apply w-full h-auto px-2 relative
         flex flex-col justify-start items-start
     }
 
     .top-legenda {
-        @apply w-auto h-auto
-        absolute -top-4 left-6
-        bg-white
+        @apply w-auto h-auto px-3 absolute -top-4 left-6
+        bg-white capitalize font-normal
     }
 
     .top-wrapper {

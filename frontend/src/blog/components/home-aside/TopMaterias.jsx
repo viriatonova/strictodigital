@@ -4,7 +4,7 @@ import TopCard from "./TopCard";
 const TopMaterias = () => {
     return (
         <div className="top">
-            <h3 className="top-legenda">MAIS LIDAS</h3>
+            <h3 className="top-legenda">mais lidas</h3>
             <ul className="top-wrapper">
                 {MainBLogPosts.map((post, index) => {
                     return (
